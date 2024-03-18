@@ -1,18 +1,19 @@
+//variables
+var userInfo = null;
+
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
 async function pageFirstLoad() {
     if (userinfo = await getUserInfo()) {
-        const userName = userinfo.clientPrincipal.userDetails;
-        document.getElementById("loginbox").innerHTML = userName;
+        document.getElementById("loginbox").innerHTML = userinfo.clientPrincipal.userDetails + " <a href="/.auth/logout">(Logout)</a>";
     } else {
-        document.getElementById("loginbox").innerHTML = "No user info";
+        document.getElementById("loginbox").innerHTML = "<a href="/.auth/login/aadb2c">Login</a>";
     }
 }
 
 async function getUserInfo() {
     const response = await fetch('/.auth/me');
     const payload = await response.json();
-    const { clientPrincipal } = payload;
     return payload;
 }
