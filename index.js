@@ -6,9 +6,9 @@ window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
 async function pageFirstLoad() {
     if (userinfo = await getUserInfo()) {
-        document.getElementById("loginbox").innerHTML = userinfo.clientPrincipal.userDetails + " <a href="/.auth/logout">(Logout)</a>";
+        document.getElementById("loginbox").innerHTML = userinfo.clientPrincipal.userDetails + " <a href=\"/.auth/logout\">(Logout)</a>";
     } else {
-        document.getElementById("loginbox").innerHTML = "<a href="/.auth/login/aadb2c">Login</a>";
+        document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
 }
 
