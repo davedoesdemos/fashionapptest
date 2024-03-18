@@ -2,7 +2,7 @@
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
 async function pageFirstLoad() {
-    if (userinfo = getUserInfo()) {
+    if (userinfo = await getUserInfo()) {
         const userName = userinfo.clientPrincipal.userDetails;
         document.getElementById("loginbox").innerHTML = userName;
     } else {
