@@ -1,7 +1,7 @@
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
-function pageFirstLoad() {
+async function pageFirstLoad() {
     if (userinfo = getUserInfo()) {
         const userName = userinfo.clientPrincipal.userDetails;
         document.getElementById("loginbox").innerHTML = userName;
