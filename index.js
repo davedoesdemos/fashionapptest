@@ -3,7 +3,8 @@ window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
 function pageFirstLoad() {
     if (userinfo = getUserInfo()) {
-        document.getElementById("loginbox").innerHTML = userinfo.userDetails;
+        const { userDetails } = userinfo;
+        document.getElementById("loginbox").innerHTML = userDetails;
     } else {
         document.getElementById("loginbox").innerHTML = "No user info";
     }
