@@ -1,0 +1,23 @@
+.header {
+    background-color: hotpink;
+    height: 5dvh;
+    display:flex;
+}
+.column1 {
+    background-color: blue;
+    height: 100%;
+    align-items: center;
+    width: 5dvw;
+  }
+  .column2 {
+      background-color: green;
+      height: 100%;
+      align-items: center;
+      width: 65dvw;
+    }
+    .column3 {
+        background-color: pink;
+        height: 100%;
+        align-items: center;
+        width: 30dvw;
+      }

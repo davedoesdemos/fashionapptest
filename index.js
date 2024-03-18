@@ -15,6 +15,6 @@ async function pageFirstLoad() {
 
 async function getUserInfo() {
     const response = await fetch('/.auth/me');
-    const payload = await response.json();
-    return payload;
+    const userDetails = await response.json();
+    return userDetails;
 }
